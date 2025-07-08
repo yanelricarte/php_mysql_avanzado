@@ -13,8 +13,6 @@ Su objetivo es que el grupo:
 2. **Navegue** el flujo completo de la petición HTTP hasta la respuesta HTML.
 3. **Modifique** y amplíe la base para incluir modelos y lógica de negocio reales en las próximas clases.
 
----
-
 ## Recordatorio rápido: ¿qué es MVC?
 
 | Módulo          | Rol en la app                                                           | Dónde lo vemos en este proyecto                                                  |
@@ -25,11 +23,9 @@ Su objetivo es que el grupo:
 
 > **Clave didáctica:** aunque hoy el Modelo real todavía no esté, ya reservamos su lugar en la arquitectura. Las tareas se reparten para no mezclar código de presentación con lógica de negocio.
 
----
 
 ## 📂 Estructura del repositorio
 
-```
 proyecto-mvc/
 │
 ├── index.php                      # Front-controller (punto de entrada)
@@ -48,7 +44,7 @@ proyecto-mvc/
 │
 └── css/
     └── estilos.css                # Estilos globales
-```
+
 
 ### ¿Por qué así?
 
@@ -56,7 +52,7 @@ proyecto-mvc/
 * Cada carpeta corresponde a **una capa** del patrón MVC.
 * Cuando sumemos un Modelo real (`modelos/Usuario.php`, por ejemplo) la estructura escalará sin romperse.
 
----
+
 
 ## 🚀 Cómo ejecutar la demo
 
@@ -66,7 +62,6 @@ proyecto-mvc/
 
 3. Abre tu navegador en
 
-   ```
    http://localhost/proyecto-mvc/
    ```
 
@@ -74,11 +69,11 @@ proyecto-mvc/
 
    > Sugerencia: abre las DevTools, pestaña **Network**, y sigue la petición completa.
 
----
+
 
 ## 🔎 Guía de lectura del código
 
-| Archivo                                   | Preguntas disparadoras para el aula                                                                                                         |
+| Archivo                                   | Preguntas guía                                                                                                        |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `index.php`                               | *¿Por qué conviene tener un único punto de entrada?*<br>*¿Qué pasaría si expusiéramos cada vista directamente?*                             |
 | `controladores/plantilla.controlador.php` | *¿Qué pasaría si aquí tuviéramos HTML?*<br>*¿Qué ventaja da envolver la carga de la plantilla en un método público?*                        |
@@ -86,15 +81,13 @@ proyecto-mvc/
 | Archivos de `paginas/`                    | *¿Por qué no hay lógica de negocio dentro de estas vistas?*<br>*¿Qué función PHP usamos para imprimir seguro (hint: `htmlspecialchars()`)?* |
 | `css/estilos.css`                         | *¿Dónde se vincula desde la vista maestra?*<br>*¿Qué capa del patrón representa?*                                                           |
 
----
 
-## 🌟 Objetivos de aprendizaje de este módulo
+## 🌟 Objetivos de aprendizaje de esta unidad
 
 1. **Distinguir** claramente Controlador y Vista.
 2. **Comprender** el flujo HTTP → front-controller → controlador → vista → navegador.
 3. **Preparar** la incorporación de un Modelo real y un router más robusto.
 
----
 
 ## 🏆 Retos para practicar
 
@@ -102,9 +95,11 @@ proyecto-mvc/
 
    * Crear `paginas/nosotros.php`.
    * Actualizar menú + condicional del router.
+
 2. **Mejorar el router**
 
    * Cambiar el bloque `if` por un `switch` o por un array de rutas válidas con `in_array()`.
+
 3. **Diseñar el Modelo**
 
    * Esbozar la clase `Usuario` (atributos: nombre, email, password) sin BD; solo instancias en memoria.
@@ -213,6 +208,6 @@ class Conexion
 ## 📜 Licencia y uso
 
 Código liberado con fines **exclusivamente educativos**.
-Puedes modificar, compartir y reutilizarlo dentro de tu curso citando la fuente.
+Puedes modificar, compartir y reutilizarlo dentro de tu curso o proyecto citando la fuente.
 
 ---
