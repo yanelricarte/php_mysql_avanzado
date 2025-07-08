@@ -26,6 +26,7 @@ Su objetivo es que el grupo:
 
 ## 📂 Estructura del repositorio
 
+```text
 proyecto-mvc/
 │
 ├── index.php                      # Front-controller (punto de entrada)
@@ -45,6 +46,7 @@ proyecto-mvc/
 └── css/
     └── estilos.css                # Estilos globales
 
+```
 
 ### ¿Por qué así?
 
